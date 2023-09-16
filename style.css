@@ -1,0 +1,16 @@
+/* table{
+    border:2px solid black;
+} */
+#input{
+    width:100%;
+
+}
+#table td{
+    width:100%;
+}
+tbody{
+
+
+display: inline-block;
+  width: 200vw;
+}

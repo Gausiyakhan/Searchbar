@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar in js</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #myTable tr.header,
+      #myTable tr:hover {
+        background-color: #f1f1f1;
+      }
+      #myTable {
+        font-family: cursive;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tbody {
+        width: 100%;
+        color: black;
+        background-color: beige;
+      }
+      #myInput {
+        flex: 1;
+        margin: 30px 0;
+        padding: 10px;
+        border: 1px solid #dddddd;
+        font-size: 30px;
+        width: 100%;
+        max-width: 100vw;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center; text-transform: uppercase; color: green">
+      MY FRIENDS
+    </h2>
+
+    <input
+      type="text"
+      name=""
+      id="myInput"
+      placeholder="Search for names..."
+      onkeyup="searchFun()"
+    />
+    <table id="myTable">
+      <tr class="header">
+        <th style="width: 50%">Name</th>
+        <th style="width: 40%">Degree</th>
+        <th style="width: 50%">Professional</th>
+      </tr>
+
+      <tr>
+        <td>Vinod</td>
+        <td>MCS</td>
+        <td>Full Stack Developer</td>
+      </tr>
+      <tr>
+        <td>Bahadur</td>
+        <td>BBA</td>
+        <td>HR Manager</td>
+      </tr>
+      <tr>
+        <td>Saima</td>
+        <td>MSC</td>
+        <td>Mathematics</td>
+      </tr>
+      <tr>
+        <td>Ahtesham</td>
+        <td>MCA</td>
+        <td>Front End Developer</td>
+      </tr>
+      <tr>
+        <td>Sadiya</td>
+
+        <td>PHD</td>
+        <td>IIMT</td>
+      </tr>
+      <tr>
+        <td>Hira</td>
+
+        <td>PHD</td>
+        <td>IIT</td>
+      </tr>
+      <tr>
+        <td>Pragati</td>
+
+        <td>PHD</td>
+        <td>DPCE</td>
+      </tr>
+      <tr>
+        <td>Aryan</td>
+        <td>PHD</td>
+        <td>MBA</td>
+      </tr>
+      <tr>
+        <td>Saba</td>
+        <td>PHD</td>
+        <td>Msc CyberSecurity</td>
+      </tr>
+    </table>
+
+    <script>
+      // arrow function
+      const searchFun = () => {
+        let filter = document.getElementById("myInput").value.toUpperCase();
+        let myTable = document.getElementById("myTable");
+        let tr = myTable.getElementsByTagName("tr");
+        for (var i = 0; i < tr.length; i++) {
+          let td = tr[i].getElementsByTagName("td")[0];
+        }
+        if (td) {
+          let textvalue = td.textContent || td.innerHTML;
+          if (textvalue.toUppercase().indexOf(filter) > -1) {
+            tr[i].style.toUppercase = "";
+          } else {
+            tr[i].style.toUppercase = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
